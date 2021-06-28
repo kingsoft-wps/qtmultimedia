@@ -96,7 +96,12 @@ void AVFVideoWidget::setAspectRatioMode(Qt::AspectRatioMode mode)
 void AVFVideoWidget::setPlayerLayer(AVPlayerLayer *layer)
 {
     if (m_playerLayer == layer)
+    {
+        if (m_playerLayer && (m_playerLayer.bounds.size.width != this->size().width()
+                            || m_playerLayer.bounds.size.height != this->size().height()))
+            updatePlayerLayerBounds(this->size());
         return;
+    }
 
     if (!m_nativeView) {
         //make video widget a native window
