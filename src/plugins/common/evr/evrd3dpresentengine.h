@@ -45,10 +45,6 @@
 
 #include <d3d9.h>
 
-#if defined(QT_OPENGL_ES_2) || defined(QT_OPENGL_DYNAMIC)
-# include <EGL/egl.h>
-# define MAYBE_ANGLE
-#endif
 
 struct IDirect3D9Ex;
 struct IDirect3DDevice9Ex;
@@ -65,38 +61,6 @@ static const GUID MFSamplePresenter_SampleCounter =
 QT_BEGIN_NAMESPACE
 
 class QAbstractVideoSurface;
-
-#ifdef MAYBE_ANGLE
-
-class OpenGLResources;
-
-class EGLWrapper
-{
-    Q_DISABLE_COPY(EGLWrapper)
-public:
-    EGLWrapper();
-
-    __eglMustCastToProperFunctionPointerType getProcAddress(const char *procname);
-    EGLSurface createPbufferSurface(EGLDisplay dpy, EGLConfig config, const EGLint *attrib_list);
-    EGLBoolean destroySurface(EGLDisplay dpy, EGLSurface surface);
-    EGLBoolean bindTexImage(EGLDisplay dpy, EGLSurface surface, EGLint buffer);
-    EGLBoolean releaseTexImage(EGLDisplay dpy, EGLSurface surface, EGLint buffer);
-
-private:
-    typedef __eglMustCastToProperFunctionPointerType (EGLAPIENTRYP EglGetProcAddress)(const char *procname);
-    typedef EGLSurface (EGLAPIENTRYP EglCreatePbufferSurface)(EGLDisplay dpy, EGLConfig config, const EGLint *attrib_list);
-    typedef EGLBoolean (EGLAPIENTRYP EglDestroySurface)(EGLDisplay dpy, EGLSurface surface);
-    typedef EGLBoolean (EGLAPIENTRYP EglBindTexImage)(EGLDisplay dpy, EGLSurface surface, EGLint buffer);
-    typedef EGLBoolean (EGLAPIENTRYP EglReleaseTexImage)(EGLDisplay dpy, EGLSurface surface, EGLint buffer);
-
-    EglGetProcAddress m_eglGetProcAddress;
-    EglCreatePbufferSurface m_eglCreatePbufferSurface;
-    EglDestroySurface m_eglDestroySurface;
-    EglBindTexImage m_eglBindTexImage;
-    EglReleaseTexImage m_eglReleaseTexImage;
-};
-
-#endif // MAYBE_ANGLE
 
 class D3DPresentEngine
 {
@@ -141,13 +105,6 @@ private:
     QVideoSurfaceFormat m_surfaceFormat;
 
     bool m_useTextureRendering;
-
-#ifdef MAYBE_ANGLE
-    unsigned int updateTexture(IDirect3DSurface9 *src);
-
-    OpenGLResources *m_glResources;
-    IDirect3DTexture9 *m_texture;
-#endif
 
     friend class IMFSampleVideoBuffer;
 };

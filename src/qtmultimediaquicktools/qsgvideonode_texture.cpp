@@ -43,7 +43,6 @@
 #include <QtGui/QOpenGLContext>
 #include <QtGui/QOpenGLFunctions>
 #include <QtGui/QOpenGLShaderProgram>
-#include <QtMultimedia/private/qmediaopenglhelper_p.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -203,8 +202,7 @@ public:
 
 private:
     bool needsSwizzling() const {
-        return !QMediaOpenGLHelper::isANGLE()
-                && (m_format.pixelFormat() == QVideoFrame::Format_RGB32
+        return (m_format.pixelFormat() == QVideoFrame::Format_RGB32
                     || m_format.pixelFormat() == QVideoFrame::Format_ARGB32);
     }
 };
