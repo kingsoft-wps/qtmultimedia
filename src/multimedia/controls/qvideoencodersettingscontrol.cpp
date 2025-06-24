@@ -155,6 +155,7 @@ QVideoEncoderSettingsControl::~QVideoEncoderSettingsControl()
     Sets the selected video encoder \a settings.
 */
 
-#include "moc_qvideoencodersettingscontrol.cpp"
 QT_END_NAMESPACE
 
+
+#include "moc_qvideoencodersettingscontrol.cpp"

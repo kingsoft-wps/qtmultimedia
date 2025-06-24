@@ -108,7 +108,7 @@ void tst_QRadioData::cleanupTestCase()
 
 void tst_QRadioData::testNullService()
 {
-    const QPair<int, int> nullRange(0, 0);
+    // const QPair<int, int> nullRange(0, 0);
 
     MockMediaServiceProvider nullProvider(0);
     QMediaServiceProvider::setDefaultServiceProvider(&nullProvider);
@@ -132,7 +132,7 @@ void tst_QRadioData::testNullService()
 
 void tst_QRadioData::testNullControl()
 {
-    const QPair<int, int> nullRange(0, 0);
+    // const QPair<int, int> nullRange(0, 0);
 
     MockMediaService service(0, 0);
     MockMediaServiceProvider provider(&service);

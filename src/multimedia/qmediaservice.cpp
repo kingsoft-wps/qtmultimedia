@@ -142,7 +142,7 @@ QMediaService::~QMediaService()
     Releases a \a control back to the service.
 */
 
-#include "moc_qmediaservice.cpp"
 
 QT_END_NAMESPACE
 
+#include "moc_qmediaservice.cpp"

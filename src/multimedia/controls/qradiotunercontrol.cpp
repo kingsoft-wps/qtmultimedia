@@ -339,6 +339,7 @@ QRadioTunerControl::~QRadioTunerControl()
     reflected with the \a connectionStatus.
 */
 
-#include "moc_qradiotunercontrol.cpp"
 QT_END_NAMESPACE
 
+
+#include "moc_qradiotunercontrol.cpp"

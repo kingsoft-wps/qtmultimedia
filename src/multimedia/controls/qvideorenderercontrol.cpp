@@ -103,6 +103,7 @@ QVideoRendererControl::~QVideoRendererControl()
     Sets the \a surface a video producer renders to.
 */
 
-#include "moc_qvideorenderercontrol.cpp"
 QT_END_NAMESPACE
 
+
+#include "moc_qvideorenderercontrol.cpp"

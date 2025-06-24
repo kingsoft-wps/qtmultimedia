@@ -124,5 +124,6 @@ QCameraLocksControl::~QCameraLocksControl()
 
 
 
-#include "moc_qcameralockscontrol.cpp"
 QT_END_NAMESPACE
+
+#include "moc_qcameralockscontrol.cpp"

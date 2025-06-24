@@ -201,7 +201,8 @@ QCameraExposureControl::~QCameraExposureControl()
     \since 5.0
 */
 
+QT_END_NAMESPACE
 
 #include "moc_qcameraexposurecontrol.cpp"
-QT_END_NAMESPACE
+
 

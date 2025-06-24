@@ -182,6 +182,7 @@ QCameraZoomControl::~QCameraZoomControl()
     like capture mode or resolution.
 */
 
-#include "moc_qcamerazoomcontrol.cpp"
 QT_END_NAMESPACE
 
+
+#include "moc_qcamerazoomcontrol.cpp"

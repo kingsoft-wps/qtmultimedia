@@ -169,7 +169,7 @@ qint64 AudioInfo::writeData(const char *data, qint64 len)
                     else
                         value = qAbs(qFromBigEndian<qint32>(ptr));
                 } else if (m_format.sampleSize() == 32 && m_format.sampleType() == QAudioFormat::Float) {
-                    value = qAbs(*reinterpret_cast<const float*>(ptr) * 0x7fffffff); // assumes 0-1.0
+                    value = qAbs(*reinterpret_cast<const float*>(ptr) * static_cast<float>(0x7fffffff)); // assumes 0-1.0
                 }
 
                 maxValue = qMax(value, maxValue);

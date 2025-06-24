@@ -97,6 +97,7 @@ QMediaNetworkAccessControl::~QMediaNetworkAccessControl()
 */
 
 
+QT_END_NAMESPACE
+
 
 #include "moc_qmedianetworkaccesscontrol.cpp"
-QT_END_NAMESPACE

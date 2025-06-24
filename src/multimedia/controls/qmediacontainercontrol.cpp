@@ -116,6 +116,7 @@ QMediaContainerControl::~QMediaContainerControl()
     Returns a description of the container \a formatMimeType.
 */
 
-#include "moc_qmediacontainercontrol.cpp"
 QT_END_NAMESPACE
 
+
+#include "moc_qmediacontainercontrol.cpp"

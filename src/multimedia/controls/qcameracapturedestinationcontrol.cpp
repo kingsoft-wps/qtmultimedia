@@ -109,6 +109,7 @@ QCameraCaptureDestinationControl::~QCameraCaptureDestinationControl()
     Signals the image capture \a destination changed.
 */
 
-#include "moc_qcameracapturedestinationcontrol.cpp"
 QT_END_NAMESPACE
 
+
+#include "moc_qcameracapturedestinationcontrol.cpp"

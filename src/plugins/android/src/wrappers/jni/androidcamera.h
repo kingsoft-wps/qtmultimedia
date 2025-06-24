@@ -230,8 +230,7 @@ private:
     QScopedPointer<QThread> m_worker;
 };
 
-Q_DECLARE_METATYPE(AndroidCamera::ImageFormat)
-
 QT_END_NAMESPACE
+Q_DECLARE_METATYPE(AndroidCamera::ImageFormat)
 
 #endif // ANDROIDCAMERA_H

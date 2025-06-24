@@ -36,6 +36,8 @@ QT_BEGIN_NAMESPACE
 
 namespace MediaFileSelector {
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-function"
 static QMediaContent selectMediaFile(const QStringList& mediaCandidates)
 {
     QMediaPlayer player;
@@ -62,6 +64,7 @@ static QMediaContent selectMediaFile(const QStringList& mediaCandidates)
 
     return QMediaContent();
 }
+#pragma GCC diagnostic pop
 
 } // MediaFileSelector namespace
 

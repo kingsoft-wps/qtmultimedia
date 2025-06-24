@@ -47,6 +47,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 @class AVFCaptureFramesDelegate;
+class CVImageVideoBuffer;
 
 QT_BEGIN_NAMESPACE
 
@@ -100,7 +101,7 @@ private:
     QMutex m_vfMutex;
     dispatch_queue_t m_delegateQueue;
 
-    friend class CVImageVideoBuffer;
+    friend class ::CVImageVideoBuffer;
 };
 
 QT_END_NAMESPACE

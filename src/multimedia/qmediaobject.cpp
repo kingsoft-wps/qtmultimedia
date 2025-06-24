@@ -431,6 +431,6 @@ void QMediaObject::setupControls()
 */
 
 
-#include "moc_qmediaobject.cpp"
 QT_END_NAMESPACE
 
+#include "moc_qmediaobject.cpp"

@@ -245,6 +245,7 @@ void QAudioRecorder::setAudioInput(const QString& name)
 
 
 
-#include "moc_qaudiorecorder.cpp"
 QT_END_NAMESPACE
 
+
+#include "moc_qaudiorecorder.cpp"

@@ -401,5 +401,6 @@ bool QCameraImageProcessing::isColorFilterSupported(QCameraImageProcessing::Colo
 }
 
 
-#include "moc_qcameraimageprocessing.cpp"
 QT_END_NAMESPACE
+
+#include "moc_qcameraimageprocessing.cpp"

@@ -644,6 +644,6 @@ void QCameraImageCapture::cancelCapture()
 */
 
 
-#include "moc_qcameraimagecapture.cpp"
 QT_END_NAMESPACE
 
+#include "moc_qcameraimagecapture.cpp"

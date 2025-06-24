@@ -191,7 +191,5 @@ QCameraFocusControl::~QCameraFocusControl()
 */
 
 
-
-#include "moc_qcamerafocuscontrol.cpp"
 QT_END_NAMESPACE
-
+#include "moc_qcamerafocuscontrol.cpp"

@@ -42,8 +42,6 @@
 #import <AVFoundation/AVAudioSession.h>
 #import <Foundation/Foundation.h>
 
-QT_BEGIN_NAMESPACE
-
 @interface CoreAudioSessionObserver : NSObject
 {
     CoreAudioSessionManager *m_sessionManager;
@@ -210,6 +208,8 @@ QT_BEGIN_NAMESPACE
 }
 
 @end //implementation CoreAudioSessionObserver
+
+QT_BEGIN_NAMESPACE
 
 CoreAudioSessionManager::CoreAudioSessionManager() :
     QObject(0)

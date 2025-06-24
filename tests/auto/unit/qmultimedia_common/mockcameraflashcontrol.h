@@ -59,7 +59,7 @@ public:
 
     bool isFlashModeSupported(QCameraExposure::FlashModes mode) const
     {
-        return (mode || (QCameraExposure::FlashAuto | QCameraExposure::FlashOff | QCameraExposure::FlashOn |
+        return (mode | (QCameraExposure::FlashAuto | QCameraExposure::FlashOff | QCameraExposure::FlashOn |
                          QCameraExposure::FlashFill |QCameraExposure::FlashTorch |QCameraExposure::FlashSlowSyncFrontCurtain |
                          QCameraExposure::FlashRedEyeReduction));
     }
